@@ -7,7 +7,7 @@ See also recording of code walk-thru sessions:
 
 ## Web (HTTP)
 
-In the browser connection to RNode can be done with **RNode Web API**. It's also possible to use gRPC with the proxy.  
+In the dbrowser connection to RNode can be done with **RNode Web API**. It's also possible to use gRPC with the proxy.  
 Web API has only defined schema in Scala source, for the new info please check [Bigsur issue 2974](https://github.com/bigsur/bigsur/issues/2974).
 
 <details>
