@@ -88,7 +88,7 @@ const appSendDeploy = effects => async ({node, code, account, phloLimit, setStat
 
   const costTxt            = R.isNil(cost) ? 'failed to retrive' : cost
   const [success, message] = R.isNil(args)
-    ? [false, 'deploy found in the block but data is not sent on `rho:rchain:deployId` channel']
+    ? [false, 'deploy found in the block but data is not sent on `rho:bigsur:deployId` channel']
     : [true, R.is(Array, args) ? args.join(', ') : args]
 
   if (!success) throw Error(`Deploy error: ${message}. // cost: ${costTxt}`)
@@ -104,11 +104,11 @@ const appPropose = ({propose, log}) => async ({httpAdminUrl}) => {
 }
 
 // Converts RhoExpr response from RNode WebAPI
-// https://github.com/rchain/rchain/blob/b7331ae05/node/src/main/scala/coop/rchain/node/api/WebApi.scala#L128-L147
+// https://github.com/bigsur/bigsur/blob/b7331ae05/node/src/main/scala/coop/bigsur/node/api/WebApi.scala#L128-L147
 // - return!("One argument")   // monadic
 // - return!((true, A, B))     // monadic as tuple
 // - return!(true, A, B)       // polyadic
-// new return(`rho:rchain:deployId`) in {
+// new return(`rho:bigsur:deployId`) in {
 //   return!((true, "Hello from blockchain!"))
 // }
 // TODO: make it stack safe

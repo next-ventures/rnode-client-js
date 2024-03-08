@@ -54,7 +54,7 @@ const getTestNetUrls = n => {
 const testnetHosts = range(5).map(getTestNetUrls)
 
 export const testNet = {
-  title: 'RChain testing network',
+  title: 'Bigsur testing network',
   name: 'testnet',
   tokenName,
   tokenDecimal: defautTokenDecimal,
@@ -75,7 +75,7 @@ const getMainNetUrls = n => ({
 const mainnetHosts = range(30).map(getMainNetUrls)
 
 export const mainNet = {
-  title: 'RChain MAIN network',
+  title: 'Bigsur MAIN network',
   name: 'mainnet',
   tokenName,
   tokenDecimal: defautTokenDecimal,

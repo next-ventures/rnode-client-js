@@ -2,7 +2,7 @@
 // - intended for use with RNode exploratory deploy
 export const checkBalance_rho = addr => `
   new return, rl(\`rho:registry:lookup\`), RevVaultCh, vaultCh in {
-    rl!(\`rho:rchain:revVault\`, *RevVaultCh) |
+    rl!(\`rho:bigsur:revVault\`, *RevVaultCh) |
     for (@(_, RevVault) <- RevVaultCh) {
       @RevVault!("findOrCreate", "${addr}", *vaultCh) |
       for (@maybeVault <- vaultCh) {

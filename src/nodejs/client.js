@@ -16,7 +16,7 @@ const { log, warn } = console
 const util = require('util')
 
 const sampleRholangCode = `
-  new return(\`rho:rchain:deployId\`), out(\`rho:io:stdout\`), x in {
+  new return(\`rho:bigsur:deployId\`), out(\`rho:io:stdout\`), x in {
     out!("Nodejs deploy test") |
 
     // Return value from Rholang

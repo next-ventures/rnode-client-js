@@ -1,13 +1,14 @@
 # RNode JS client examples
 
 See also recording of code walk-thru sessions:
- - [2020\-07\-28 RChain Education](https://youtu.be/5JEtt53EacI?t=1043)
- - [2020\-08\-25 RChain Education](https://www.youtube.com/watch?v=2EUd2vOiJX8)
+
+- [2020\-07\-28 Bigsur Education](https://youtu.be/5JEtt53EacI?t=1043)
+- [2020\-08\-25 Bigsur Education](https://www.youtube.com/watch?v=2EUd2vOiJX8)
 
 ## Web (HTTP)
 
 In the browser connection to RNode can be done with **RNode Web API**. It's also possible to use gRPC with the proxy.  
-Web API has only defined schema in Scala source, for the new info please check [RChain issue 2974](https://github.com/rchain/rchain/issues/2974).
+Web API has only defined schema in Scala source, for the new info please check [Bigsur issue 2974](https://github.com/bigsur/bigsur/issues/2974).
 
 <details>
 <summary>Quick info to run Web example with two nodes</summary>
@@ -19,6 +20,7 @@ npm install && docker-compose up -d && npm run start:web
 # Logs from all nodes
 docker-compose logs -f
 ```
+
 </details>
 
 Web example is published from `gh-pages` branch on this url [https://tgrospic.github.io/rnode-client-js](https://tgrospic.github.io/rnode-client-js).
@@ -36,7 +38,7 @@ In [eth-sign.js](src/eth/eth-sign.js) are functions to verify deploy signature a
 This is all that is needed for communication with Metamask and also for connected hardware wallets (Ledger). How to use these functions and send deploys to RNode is in [rnode-web.js](src/rnode-web.js).
 
 Changes on the web page are only saved in memory so it will be lost after refreshing the page.  
-RChain networks available for selection are in [rchain-networks.js](src/rchain-networks.js) file.
+Bigsur networks available for selection are in [bigsur-networks.js](src/bigsur-networks.js) file.
 
 ## Install
 
@@ -76,13 +78,13 @@ npm run start:web
 In `src/nodejs/client.js` script is an example of how to connect to RNode from Nodejs.
 
 ```sh
-# Run nodejs example / sample requests to RChain testnet
+# Run nodejs example / sample requests to Bigsur testnet
 npm run start:nodejs
 ```
 
 ## Run RNode with Docker
 
-In the project is [Docker compose](docker-compose.yml) configuration to run local RChain network.
+In the project is [Docker compose](docker-compose.yml) configuration to run local Bigsur network.
 
 ```sh
 # Starts validator and read-only RNode in daemon mode

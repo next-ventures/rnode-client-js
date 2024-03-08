@@ -66,7 +66,7 @@ export const deployDataProtobufSerialize = deployData => {
   const writeString = (order, val) => val != "" && writer.writeString(order, val)
   const writeInt64  = (order, val) => val != 0  && writer.writeInt64(order, val)
 
-  // https://github.com/rchain/rchain/blob/ebe4d476371/models/src/main/protobuf/CasperMessage.proto#L134-L149
+  // https://github.com/bigsur/bigsur/blob/ebe4d476371/models/src/main/protobuf/CasperMessage.proto#L134-L149
   // message DeployDataProto {
   //   bytes  deployer             = 1; //public key
   //   string term                 = 2; //rholang source code to deploy (will be parsed into `Par`)

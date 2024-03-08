@@ -3,7 +3,7 @@ export const posBond_rho = amount => `
   new retCh, PoSCh, rl(\`rho:registry:lookup\`), stdout(\`rho:io:stdout\`) in {
     stdout!("About to lookup pos contract...") |
 
-    rl!(\`rho:rchain:pos\`, *PoSCh) |
+    rl!(\`rho:bigsur:pos\`, *PoSCh) |
 
     for(@(_, PoS) <- PoSCh) {
       stdout!("About to bond...") |

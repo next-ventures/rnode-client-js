@@ -3,11 +3,11 @@ import m from 'mithril'
 import * as R from 'ramda'
 import { labelStyle, showTokenDecimal, labelRev, showNetworkError } from './common'
 
-const sampleReturnCode = `new return(\`rho:rchain:deployId\`) in {
+const sampleReturnCode = `new return(\`rho:bigsur:deployId\`) in {
   return!((42, true, "Hello from blockchain!"))
 }`
 
-const sampleInsertToRegistry = `new return(\`rho:rchain:deployId\`),
+const sampleInsertToRegistry = `new return(\`rho:bigsur:deployId\`),
   insertArbitrary(\`rho:registry:insertArbitrary\`)
 in {
   new uriCh, valueCh in {
@@ -18,7 +18,7 @@ in {
   }
 }`
 
-const sampleRegistryLookup = `new return(\`rho:rchain:deployId\`),
+const sampleRegistryLookup = `new return(\`rho:bigsur:deployId\`),
   lookup(\`rho:registry:lookup\`)
 in {
   new valueCh in {

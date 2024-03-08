@@ -1,7 +1,7 @@
 // @ts-check
 import * as R from 'ramda'
 import m from 'mithril'
-import { localNet, testNet, mainNet, getNodeUrls } from '../../rchain-networks'
+import { localNet, testNet, mainNet, getNodeUrls } from '../../bigsur-networks'
 import { ethDetected } from '../../eth/eth-wrapper'
 import { makeRenderer } from './common'
 
@@ -89,7 +89,7 @@ const mainCtrl = (st, effects) => {
 
     hfMsgOn && m('.hf-info', { style: `zoom: ${zoom}` },
       m.trust('<b>Main net</b> is back online after the <b>Hard Fork 1</b>. '),
-      m.trust('See <a target="_blank" href="https://github.com/rchain/rchip-proposals/issues/42">RCHIP#42</a> for more info.'),
+      m.trust('See <a target="_blank" href="https://github.com/bigsur/rchip-proposals/issues/42">RCHIP#42</a> for more info.'),
     ),
 
     // Selector control
