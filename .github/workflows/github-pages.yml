@@ -1,34 +1,32 @@
-name: Publish gh-pages
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
     branches:
-    - master
+      - master  # or main, depending on your default branch name
 
 jobs:
-  gh-pages:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Check out
-      uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Setup Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18.x'
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Specify your Node.js version here
 
-    - name: Cache dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      - name: Install Dependencies
+        run: npm install
 
-    - run: npm install
-    - run: npm run build:web
-    - name: Push gh-pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+      - name: Build Project
+        run: npm run build  # Adjust this to your build command
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # The branch the action deploys to
+          folder: dist  # The folder the action should deploy
+          token: ${{ secrets.GITHUB_TOKEN }}  # Permissions to push to the GitHub Pages branch
