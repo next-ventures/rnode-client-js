@@ -14,7 +14,7 @@ require('../../rnode-grpc-gen/js/ProposeServiceV1_pb')
 const { log, warn } = console
 
 const rnodeUrl = 'localhost:40402'
-// const rnodeUrl = 'node3.testnet.rchain.coop:40401'
+// const rnodeUrl = 'node3.testnet.bigsur.network:40401'
 
 const secp256k1 = new ec('secp256k1')
 

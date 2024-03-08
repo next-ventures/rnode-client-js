@@ -25,7 +25,7 @@ const sampleRholangCode = `
 `
 
 const rnodeExternalUrl = 'localhost:40401'
-// const rnodeExternalUrl = 'node3.testnet.rchain.coop:40401'
+// const rnodeExternalUrl = 'node3.testnet.bigsur.network:40401'
 
 const rnodeInternalUrl = 'localhost:40402'
 

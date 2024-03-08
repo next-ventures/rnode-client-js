@@ -44,7 +44,7 @@ const range = n => [...Array(n).keys()]
 const getTestNetUrls = n => {
   const instance = `node${n}`
   return {
-    domain: `${instance}.testnet.rchain.coop`,
+    domain: `${instance}.testnet.bigsur.network`,
     instance,
     shardId: testNetShardId,
     ...defaultPortsSSL,
@@ -60,14 +60,14 @@ export const testNet = {
   tokenDecimal: defautTokenDecimal,
   hosts: testnetHosts,
   readOnlys: [
-    { domain: 'observer.testnet.rchain.coop', instance: 'observer', shardId: testNetShardId, ...defaultPortsSSL },
+    { domain: 'observer.testnet.bigsur.network', instance: 'observer', shardId: testNetShardId, ...defaultPortsSSL },
   ],
 }
 
 // MAIN network
 
 const getMainNetUrls = n => ({
-  domain: `node${n}.root-shard.mainnet.rchain.coop`,
+  domain: `node${n}.root-shard.mainnet.bigsur.network`,
   shardId: mainNetShardId,
   ...defaultPortsSSL,
 })
@@ -82,10 +82,10 @@ export const mainNet = {
   hosts: mainnetHosts,
   readOnlys: [
     // Load balancer (not gRPC) server for us, asia and eu servers
-    { domain: 'observer.services.mainnet.rchain.coop', shardId: mainNetShardId, https: 443 },
-    { domain: 'observer-us.services.mainnet.rchain.coop', shardId: mainNetShardId, ...defaultPortsSSL },
-    { domain: 'observer-asia.services.mainnet.rchain.coop', shardId: mainNetShardId, ...defaultPortsSSL },
-    { domain: 'observer-eu.services.mainnet.rchain.coop', shardId: mainNetShardId, ...defaultPortsSSL },
+    { domain: 'observer.services.mainnet.bigsur.network', shardId: mainNetShardId, https: 443 },
+    { domain: 'observer-us.services.mainnet.bigsur.network', shardId: mainNetShardId, ...defaultPortsSSL },
+    { domain: 'observer-asia.services.mainnet.bigsur.network', shardId: mainNetShardId, ...defaultPortsSSL },
+    { domain: 'observer-eu.services.mainnet.bigsur.network', shardId: mainNetShardId, ...defaultPortsSSL },
   ],
 }
 

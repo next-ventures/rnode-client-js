@@ -26,7 +26,7 @@ const sampleRholangCode = `
 `
 
 const rnodeExternalUrl = 'localhost:40411'
-// const rnodeExternalUrl = 'observer.testnet.rchain.coop:40401'
+// const rnodeExternalUrl = 'observer.testnet.bigsur.network:40401'
 
 const rnodeExample = async () => {
   // Get RNode service methods
