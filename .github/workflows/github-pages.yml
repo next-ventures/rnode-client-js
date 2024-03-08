@@ -27,9 +27,15 @@ jobs:
 
     - run: npm install
     - run: npm run build:web
+    
+    # This step was added for debugging: list contents of the dist directory
+    - name: List output of dist directory
+      run: ls -l dist
 
     - name: Push gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
+        # This option forces the action to use a deploy key instead of GITHUB_TOKEN if there are permission issues
+        deploy_key: ${{ secrets.DEPLOY_KEY }}
