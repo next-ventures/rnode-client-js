@@ -62,7 +62,7 @@ const sendDeploy = rnodeHttp => async (node, account, code, phloLimit) => {
   }
 
   // Get the latest block number
-  const [{ blockNumber }] = await rnodeHttp(node.httpUrl, 'blocks/1')
+  const [{ blockNumber }] = await rnodeHttp(node.httpUrl, 'block/1')
 
   // Create a deploy
   const phloLimitNum = !!phloLimit || phloLimit == 0 ? phloLimit : 500e3

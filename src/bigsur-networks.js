@@ -105,7 +105,7 @@ export const getNodeUrls = ({name, tokenName, tokenDecimal, shardId, domain, grp
     httpUrl,
     httpAdminUrl,
     statusUrl    : `${httpUrl}/api/status`,
-    getBlocksUrl : `${httpUrl}/api/blocks`,
+    getBlocksUrl : `${httpUrl}/api/v1/block`,
     // Testnet only
     logsUrl : instance && `http://${domain}:8181/logs/name:${instance}`,
   }
